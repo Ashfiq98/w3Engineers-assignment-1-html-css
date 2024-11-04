@@ -115,3 +115,63 @@
 .blue{
     color: blue;
 }
+
+ /* main header */
+ .main-header {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-between;
+    /* padding: 20px; */
+}
+
+.single-photo {
+    flex: 1 1 300px; /* Allows it to grow/shrink, minimum width 300px */
+    margin-right: 5px; /* Space between the two portions */
+}
+
+.single-photo img {
+    width: 100%; /* Makes image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.multiple-photos {
+    display: flex;
+    flex: 1 1 0; /* Allows it to grow/shrink */
+    flex-wrap: wrap; /* Allow photos to wrap if the screen is small */
+    margin-bottom: 4px;
+}
+
+.multiple-photos img {
+    width: 48%; /* Responsive width, two images per row */
+    height: auto; /* Maintain aspect ratio */
+    /* margin: 2px; */
+    padding: 0px 1px 1px 1px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Stack the portions on smaller screens */
+    }
+    
+    .single-photo {
+        margin-right: 0; /* Remove margin for single photo */
+        margin-bottom: 20px; /* Add space below the single photo */
+    }
+    
+    .multiple-photos img {
+        width: 100%; /* Full width for smaller screens */
+        margin: 5px 0; /* Space between images */
+    }
+    .head-img-1{
+        margin: 0px 1px 1px 0px;
+    }
+    .head-img-2{
+        margin: 0px 0px 1px 1px;
+    }
+    .head-img-3{
+        margin: 0px 1px 0px 0px;
+    }
+    .head-img-4{
+        margin: 1px 0px 0px 1px;
+    }
+}
