@@ -1196,7 +1196,7 @@ pre {
 /* responsive code */
 /* first header and main header */
 
-@media (max-width: 360px) {
+@media (max-width: 1024px) {
   /* General container adjustments */
   
   .container {
